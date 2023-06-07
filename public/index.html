@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GitNote</title>
+    <link rel="stylesheet" href="gitnote.css">
+</head>
+
+<body">
+    <div class="container">
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+        <div class="nota"></div>
+    </div>
+    <div class="form">
+        <button class="button" id="botonIni" onclick="empezar()">Empezar</button>
+        <button class="button" id="botonRef" onclick="refrescar()" disabled="true">Refrescar (flechas)</button>
+        <div class="oneForm">
+            <label class="campo">Nota inicio
+                <input type="text" id="notaInicio" maxlength=6 class="texto">
+            </label>
+        </div>
+        <div class="oneForm">
+            <label class="campo">Nota fin
+                <input type="text" id="notaFin" maxlength=6 class="texto">
+            </label>
+        </div>
+        <div class="oneForm">
+            <label class="campo">Notación Americana
+                <input type="checkbox" id="checkBox" class="check">
+            </label>
+        </div>
+    </div>
+    <div class="menu">
+        <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" onclick="limpiarOp()" />
+        <label for="abrir-cerrar" class="toggle-button">
+            <span class="cerrar" title="Cerrar">Cerrar</span>
+            <span class="abrir" title="Abrir">Abrir</span>
+        </label>
+        <nav>
+            <ul class="opciones">
+                <li><button class="botonOpcion" id="modo" onclick="visualizarOpcion('modo')">Modo</button></li>
+                <li><button class="botonOpcion" id="ayuda" onclick="visualizarOpcion('ayuda')">Ayuda</button></li>
+                <li><button class="botonOpcion" id="sobre" onclick="visualizarOpcion('sobre')">Sobre</button></li>
+            </ul>
+            <div id="descripOpciones">
+                <div id="modoOp" class="opcionMenu">
+                    <ul>
+                        <li>
+                            <label class="nombreModo">
+                                <input type="checkbox" checked=true id="notasMastil" disabled=true/>
+                                Aprender las notas de la guitarra (único modo disponible de momento)
+                            </label>
+                        </li>
+
+                    </ul>
+                </div>
+                <div id="ayudaOp" class="opcionMenu">
+                    <div class="acordeon-cuerpo">
+                        <div class="acordeon">
+                            <h1>Temas de ayuda</h1>
+                            <hr>
+                            <div class="contenedor">
+                                <div class="etiqueta">Modo Aprender las notas del mástil</div>
+                                <div class="contenido">
+                                    <p>
+                                        Este modo entrena a aprender todas las notas en el mástil de la guitarra. Para
+                                        ello el usuario introduce una nota inicio y una nota fin. Se admite tanto
+                                        la notación clásica como la americana. En caso de no elegir notas, se
+                                        seleccionarán automáticamente las 88 notas de piano. El usuario va pulsando en
+                                        el mástil las
+                                        notas que han sido generadas aleatoriamente, dentro del rango seleccionado.
+                                    </p>
+                                    <p>
+                                        En refrescar, se eligen automáticamente otras 15 notas. El usuario puede elegir
+                                        por ejemplo, las notas que van desde el Mi 2 al So# 4, que son las equivalentes
+                                        a todas las
+                                        notas de la primera posición de la guitarra (de cuerdas al aire o traste 0;
+                                        hasta traste 4,
+                                        incluídos).
+                                    </p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="contenedor">
+                                <div class="etiqueta">¿Se ampliarán las funcionalidades del programa?</div>
+                                <div class="contenido">
+                                    <p>
+                                        Progresivamente se irán añadiendo nuevas funcionalidades
+                                        de entretanmiento con guitarra. Por ejemplo, se añadirá una opción para aprender
+                                        acordes; y otra para aprender distintas escalas.
+                                    </p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="contenedor">
+                                <div class="etiqueta">Soporte</div>
+                                <div class="contenido">
+                                    <p>
+                                        carrcelt@gmail.com
+                                </div>
+                                </p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div id="sobreOp" class="opcionMenu">
+                    <p class="parrafo">GitNote. 2023. Creado por Vicente Carretero</p>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <script type="text/javascript" src="gitnote.js"></script>
+    </body>
+
+</html>
